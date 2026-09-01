@@ -256,6 +256,13 @@
     transition:border-color 0.3s ease; pointer-events:none;
   }
   .lead-card:hover .lead-photo-wrap{box-shadow:0 26px 44px -18px rgba(0,0,0,0.5);}
+  .lead-photo-placeholder{
+    width:100%; aspect-ratio:1; display:flex; align-items:center; justify-content:center;
+    background:linear-gradient(135deg, var(--ink-3), var(--ink));
+    font-family:'Newsreader',serif; font-size:3rem; color:var(--gold-light);
+    transition:transform 0.5s cubic-bezier(.2,.6,.3,1);
+  }
+  .lead-card:hover .lead-photo-placeholder{transform:scale(1.06);}
   .lead-card:hover .lead-photo-wrap::after{border-color:var(--gold);}
   .lead-card .lead-photo{
     width:100%; aspect-ratio:1; object-fit:cover; display:block;
