@@ -151,7 +151,7 @@
   }
   .timeline-wrap{position:relative; margin-top:20px; padding-top:10px;}
   .timeline-track{
-    display:grid; grid-template-columns:repeat(8,1fr); column-gap:6px;
+    display:grid; grid-template-columns:repeat(11,1fr); column-gap:4px;
     position:relative; padding-top:0;
   }
   .timeline-track::before{
