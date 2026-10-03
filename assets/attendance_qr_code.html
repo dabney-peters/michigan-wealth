@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ENTR 550 Attendance QR Code</title>
+<style>
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5f7;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  .card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 40px 48px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    text-align: center;
+    max-width: 420px;
+  }
+  h1 {
+    font-size: 20px;
+    color: #1d1d1f;
+    margin: 0 0 4px 0;
+  }
+  p.sub {
+    font-size: 14px;
+    color: #6e6e73;
+    margin: 0 0 24px 0;
+  }
+  img {
+    width: 280px;
+    height: 280px;
+    border-radius: 8px;
+  }
+  a.link {
+    display: block;
+    margin-top: 20px;
+    font-size: 13px;
+    color: #0071e3;
+    word-break: break-all;
+    text-decoration: none;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <h1>ENTR 550 Attendance</h1>
+    <p class="sub">Scan to check in</p>
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=280x280&data=https%3A%2F%2Fdocs.google.com%2Fforms%2Fd%2Fe%2F1FAIpQLScLRJfNXZCp18gn3SoBQT4qmtpYgbE2g77TV2z3MU7iQkHFcQ%2Fviewform%3Fusp%3Dpublish-editor" alt="QR code for attendance form">
+    <a class="link" href="https://docs.google.com/forms/d/e/1FAIpQLScLRJfNXZCp18gn3SoBQT4qmtpYgbE2g77TV2z3MU7iQkHFcQ/viewform?usp=publish-editor" target="_blank">
+      docs.google.com/forms/.../viewform
+    </a>
+  </div>
+</body>
+</html>
