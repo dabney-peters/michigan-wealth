@@ -603,7 +603,7 @@ nav.links a.active{color:var(--gold-light); opacity:1;}
 }
 
 /* Wide photo banner (used for event/leadership group shots) */
-.photo-banner{width:100%; height:0; padding-bottom:30.3%; position:relative; overflow:hidden; background:var(--ink);}
+.photo-banner{width:100%; height:0; padding-bottom:38.46%; position:relative; overflow:hidden; background:var(--ink);}
 .photo-banner img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;}
 .photo-banner .caption{
   position:absolute; bottom:14px; left:24px; z-index:2;
@@ -636,4 +636,36 @@ nav.links a.active{color:var(--gold-light); opacity:1;}
 .team-card .reports-to{
   font-family:'IBM Plex Mono',monospace; font-size:0.6rem; letter-spacing:0.05em;
   text-transform:uppercase; color:#8A6A1E; display:block; margin-bottom:14px; opacity:0.85;
+}
+
+/* First-meeting scrapbook (Meetings page) */
+.scrapbook-section{background:var(--ink); padding:84px 32px 96px; position:relative; overflow:hidden;}
+.scrapbook-section .section-head{margin-left:auto; margin-right:auto; text-align:center; margin-bottom:0;}
+.scrapbook{display:flex; flex-wrap:wrap; justify-content:center; gap:40px 30px; max-width:1180px; margin:56px auto 0;}
+.polaroid{
+  margin:0; background:#FBF9F2; padding:12px 12px 14px; width:calc(25% - 24px); min-width:210px; max-width:270px;
+  box-shadow:0 20px 38px -14px rgba(0,0,0,0.7);
+  transform:rotate(var(--rot,0deg)); transition:transform 0.35s cubic-bezier(.2,.7,.3,1), box-shadow 0.35s ease;
+  position:relative;
+}
+.polaroid:nth-child(even){margin-top:28px;}
+.polaroid::before{
+  content:""; position:absolute; top:-12px; left:50%; width:74px; height:22px;
+  transform:translateX(-50%) rotate(-3deg); background:rgba(205,174,124,0.6);
+  box-shadow:0 1px 3px rgba(0,0,0,0.25);
+}
+.polaroid img{width:100%; aspect-ratio:8/5; object-fit:cover; display:block;}
+.polaroid figcaption{
+  font-family:'Newsreader',serif; font-style:italic; color:#2A2A33;
+  text-align:center; padding-top:12px; font-size:0.98rem;
+}
+.polaroid:hover{
+  transform:rotate(0deg) scale(1.07) translateY(-6px); z-index:3;
+  box-shadow:0 30px 50px -16px rgba(0,0,0,0.8);
+}
+@media (max-width:760px){
+  .scrapbook{gap:30px 16px;}
+  .polaroid{width:calc(50% - 10px); min-width:0; padding:8px 8px 10px;}
+  .polaroid:nth-child(even){margin-top:14px;}
+  .polaroid figcaption{font-size:0.8rem; padding-top:8px;}
 }
